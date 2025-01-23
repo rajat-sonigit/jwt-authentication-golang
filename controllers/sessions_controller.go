@@ -33,7 +33,6 @@ func Signup(c *gin.Context) {
 			gin.H{"error": "Email missing"})
 		return
 	}
-
 	// Create the user
 	user := models.UserCreate(data.Email, data.Password)
 	if user == nil || user.ID == 0 {
