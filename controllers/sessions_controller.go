@@ -22,7 +22,6 @@ type formData struct {
 	Email    string `form:"email"`
 	Password string `form:"password"`
 }
-
 func Signup(c *gin.Context) {
 	var data formData
 	c.Bind(&data)
