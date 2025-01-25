@@ -14,6 +14,7 @@ func SignupPage(c *gin.Context) {
 		"sessions/signup.tpl",
 		gin.H{})
 }
+
 func LoginPage(c *gin.Context) {
 	c.HTML(http.StatusOK,
 		"sessions/login.tpl",
