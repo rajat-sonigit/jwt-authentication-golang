@@ -20,6 +20,7 @@ func LoginPage(c *gin.Context) {
 		"sessions/login.tpl",
 		gin.H{})
 }
+
 type formData struct {
 	Email    string `form:"email"`
 	Password string `form:"password"`
