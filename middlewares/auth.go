@@ -35,7 +35,6 @@ func AuthMiddleware(c *gin.Context) {
 			gin.H{"error": "Failed to parse JWT token"})
 		c.Abort()
 	}
-
 	claims, ok := token.Claims.(jwt.MapClaims)
 	if !ok {
 		c.HTML(http.StatusUnauthorized,
