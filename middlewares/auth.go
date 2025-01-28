@@ -23,7 +23,6 @@ func AuthMiddleware(c *gin.Context) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("Unexpected signing method: %v", token.Header["alg"])
 		}
-
 		// TODO: Move this to env variable.
 		hmacSampleSecret := "e1bed9f5-81d7-4810-9f9b-307d2761c4d4"
 
