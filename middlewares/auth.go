@@ -50,7 +50,6 @@ func AuthMiddleware(c *gin.Context) {
 			gin.H{"error": "JWT token expired!"})
 		c.Abort()
 	}
-
 	// Extract the user from the token
 	var user models.User
 	models.DB.Where("id = ?", claims["userID"]).First(&user)
