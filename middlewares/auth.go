@@ -17,7 +17,6 @@ func AuthMiddleware(c *gin.Context) {
 			gin.H{"error": "No auth token"})
 		c.Abort()
 	}
-
 	// Extract the JWT token
 	token, err := jwt.Parse(tokenStr, func(token *jwt.Token) (interface{}, error) {
 		// Don't forget to validate the alg is what you expect:
