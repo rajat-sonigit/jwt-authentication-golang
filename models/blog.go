@@ -14,7 +14,6 @@ func BlogsAll() *[]Blog {
 	DB.Where("deleted_at is NULL").Order("updated_at desc").Find(&blogs)
 	return &blogs
 }
-
 func BlogsFind(id uint64) *Blog {
 	var blog Blog
 	DB.Where("id = ?", id).First(&blog)
