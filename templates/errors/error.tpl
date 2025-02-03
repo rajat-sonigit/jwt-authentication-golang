@@ -9,4 +9,5 @@
         </div>
 
     {{ template "layouts/footer.tpl" .}}
+
 {{end}}
