@@ -30,6 +30,7 @@
                     .then(data => {
                         console.log(data); // Process your data here
                     })
+
                     .catch(error => {
                         console.error('There has been a problem with your fetch operation:', error);
                     });
